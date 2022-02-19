@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const weather = require('./utils/weather')
 
 const app = express()               // initiates new express application
+const port = process.env.PORT || 3000     // port uses the default port on heroku OR port 3000 if the environment variable is not available locally
 
 // Define paths for Express config
 const publicDir = path.join(__dirname, '../public')
@@ -93,6 +94,6 @@ app.get('*', (req, res) => {
 })
 
 //starts up the server; listening on port 3000 (common dev port; port 80 is the default http port). Second argument is callback! 
-app.listen(3000, () => {
-    console.log('Server started on port 3000')
+app.listen(port, () => {
+    console.log('Server started on port' + port)
 })

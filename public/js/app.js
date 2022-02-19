@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e) => {
     const location = searchTerm.value                              //prevent default behaviour of refreshing the browser after submit 
     messageOne.textContent = 'LOADING'
     messageTwo.textContent = ''
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {    
+    fetch('/weather?address=' + location).then((response) => {    
         response.json().then((data) => {
             if (data.error) {
                messageOne.textContent = data.error               
