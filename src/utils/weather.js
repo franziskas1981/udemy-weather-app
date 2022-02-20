@@ -8,7 +8,7 @@ const weather = (lat, lon, callback) => {
          } else if (body.error) {
              callback (body.error.info)
          } else {
-             callback (undefined, 'It is currently '+ body.current.temperature + ' degrees out. And it feels like ' + body.current.feelslike + ' degrees!')
+             callback (undefined, 'It is currently '+ body.current.temperature + ' degrees out. And it feels like ' + body.current.feelslike + ' degrees! It is ' + body.current.weather_descriptions + '!')
          }
      })
 }
