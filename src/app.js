@@ -38,7 +38,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        help: 'Provide a location in the form and click send!', 
+        help: 'Provide a location (city name) in the form and click send!', 
         name: 'Franzi'
     })
 })
